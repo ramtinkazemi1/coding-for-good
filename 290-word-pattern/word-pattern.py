@@ -8,6 +8,9 @@ class Solution:
 
         pattern_to_word = {}
         word_to_pattern = {}
+        # pattern_to_word: {'a': 'dog', 'b': 'cat'}
+        # word_to_pattern: {'dog': 'a', 'cat': 'b'}
+        # zip(patter,words) = [('a', 'dog'), ('b', 'cat'), ('b', 'cat'), ('a', 'dog')]
 
         for char, word in zip(pattern, words):
             if char in pattern_to_word:
