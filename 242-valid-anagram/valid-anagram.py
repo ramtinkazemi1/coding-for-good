@@ -16,6 +16,8 @@ class Solution:
           else:
             dic2[char]+=1
 
+
+        # must check both ways
         for key, value in dic1.items():
           if key not in dic2:
             return False
