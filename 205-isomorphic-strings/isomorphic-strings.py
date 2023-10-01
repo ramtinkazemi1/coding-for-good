@@ -12,3 +12,11 @@ class Solution:
                 return False
 
         return True
+
+        '''
+        s = "egg"
+        t = "add"
+
+        zip(s,t) = [('e', 'a'), ('g', 'd'), ('g', 'd')]
+
+        '''
