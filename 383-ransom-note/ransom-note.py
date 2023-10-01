@@ -24,4 +24,5 @@ class Solution:
                     del mg[char]
             else:
                 return False
+                
         return True
