@@ -1,11 +1,33 @@
 class Solution:
     def isAnagram(self, s, t):
-        # In case of different length of thpse two strings...
-        if len(s) != len(t):
+        
+        dic1={}
+        dic2={}
+
+        for char in s:
+          if char not in dic1:
+            dic1[char]=1
+          else:
+            dic1[char]+=1
+          
+        for char in t:
+          if char not in dic2:
+            dic2[char]=1
+          else:
+            dic2[char]+=1
+
+        for key, value in dic1.items():
+          if key not in dic2:
             return False
-        for idx in set(s):
-            # Compare s.count(l) and t.count(l) for every index i from 0 to 26...
-            # If they are different, return false...
-            if s.count(idx) != t.count(idx):
+          else:
+              if dic2[key] != value:
                 return False
-        return True     # Otherwise, return true...
+
+        for key, value in dic2.items():
+          if key not in dic1:
+            return False
+          else:
+              if dic1[key] != value:
+                return False
+
+        return True
