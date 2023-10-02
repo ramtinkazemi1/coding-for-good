@@ -10,9 +10,7 @@ class Solution:
                 dic[num]=1
             else:
                 dic[num]+=1
-        print(x)
-        for key,val in dic.items():
-            print(key,val)
+        
         
         for key,val in dic.items():
             if (val > x):
