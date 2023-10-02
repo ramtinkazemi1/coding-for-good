@@ -6,6 +6,7 @@ class Solution:
         for i in range(len(nums)):
             if i > farthest:
                 return False  # If the current position is unreachable, return False
-            farthest = max(farthest, i + nums[i])  # Update the farthest reachable position
+                
+            farthest = max(farthest, i + nums[i]) 
 
         return farthest >= len(nums) - 1
