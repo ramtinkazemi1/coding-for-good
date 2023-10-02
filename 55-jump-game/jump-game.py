@@ -1,7 +1,7 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         
-        farthest = 0  # Initialize the farthest position to 0
+        farthest = 0 
 
         for i in range(len(nums)):
             if i > farthest:
@@ -9,6 +9,3 @@ class Solution:
             farthest = max(farthest, i + nums[i])  # Update the farthest reachable position
 
         return farthest >= len(nums) - 1
-
-
-        
