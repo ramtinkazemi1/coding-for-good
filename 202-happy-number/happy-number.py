@@ -1,6 +1,6 @@
 class Solution:
     def isHappy(self, n: int) -> bool:
-        def get_next(num):
+        def calc_sum(num):
             sum = 0
             while num > 0:
                 digit = num % 10
@@ -11,6 +11,6 @@ class Solution:
         seen = set()
         while n != 1 and n not in seen:
             seen.add(n)
-            n = get_next(n)
+            n = calc_sum(n)
 
         return n == 1
