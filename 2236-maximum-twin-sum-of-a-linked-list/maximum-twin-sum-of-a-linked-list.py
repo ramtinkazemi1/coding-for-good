@@ -6,7 +6,8 @@
 
 class Solution:
     def pairSum(self, head: Optional[ListNode]) -> int:
-        slow, fast = head, head
+        slow = head
+        fast = head
         maxVal = 0
 
         # Get middle of linked list
@@ -15,10 +16,15 @@ class Solution:
             slow = slow.next
 
         # Reverse second part of linked list
-        curr, prev = slow, None
+        curr = slow
+        prev = None
 
         while curr:       
-            curr.next, prev, curr = prev, curr, curr.next   
+            next_node = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next_node
+  
 
         # Get max sum of pairs
         while prev:
