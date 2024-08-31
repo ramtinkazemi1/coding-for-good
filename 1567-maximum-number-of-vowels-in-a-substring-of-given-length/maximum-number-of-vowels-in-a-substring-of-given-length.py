@@ -2,10 +2,10 @@ class Solution:
     def maxVowels(self, s: str, k: int) -> int:
         # substring = sliding window
         # s = "abciiidef", k = 3
+        # vowels = set('aeiou') also works!
 
         left = max_vowels = current_vowel_count = 0
         vowels = ['a','e','i','o','u']
-
 
         for right in range(len(s)):
 
